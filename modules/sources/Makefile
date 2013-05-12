@@ -17,7 +17,7 @@ obj-m += backlight/
 #obj-m += thumbee/
 #obj-m += qtouch_obp_ts/
 
-# mb525/mb526 specific
+# mb52x specific
 #obj-m += proximity/
 #obj-m += pvr/
 #obj-m += klogger/
