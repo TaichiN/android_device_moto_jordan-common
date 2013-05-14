@@ -1,5 +1,5 @@
 hboot.o: \
- /media/sdc1/jellybean/device/motorola/jordan-common/modules/sources/hbootmod/hboot.c \
+ /media/sdc1/jellybean/device/moto/jordan-common/modules/sources/hbootmod/hboot.c \
  include/linux/autoconf.h \
  /media/sdc1/jellybean/jordan-kernel/arch/arm/include/asm/uaccess.h \
  /media/sdc1/jellybean/jordan-kernel/include/linux/string.h \
@@ -267,7 +267,7 @@ hboot.o: \
  /media/sdc1/jellybean/jordan-kernel/include/linux/node.h \
  /media/sdc1/jellybean/jordan-kernel/include/linux/sysdev.h \
  /media/sdc1/jellybean/jordan-kernel/arch/arm/include/asm/bootinfo.h \
- /media/sdc1/jellybean/device/motorola/jordan-common/modules/sources/hbootmod/hboot.h \
- /media/sdc1/jellybean/device/motorola/jordan-common/modules/sources/hbootmod/buffers.h \
- /media/sdc1/jellybean/device/motorola/jordan-common/modules/sources/hbootmod/emu_uart.h \
- /media/sdc1/jellybean/device/motorola/jordan-common/modules/sources/hbootmod/cache.h
+ /media/sdc1/jellybean/device/moto/jordan-common/modules/sources/hbootmod/hboot.h \
+ /media/sdc1/jellybean/device/moto/jordan-common/modules/sources/hbootmod/buffers.h \
+ /media/sdc1/jellybean/device/moto/jordan-common/modules/sources/hbootmod/emu_uart.h \
+ /media/sdc1/jellybean/device/moto/jordan-common/modules/sources/hbootmod/cache.h
