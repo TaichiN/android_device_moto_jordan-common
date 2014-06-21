@@ -205,9 +205,6 @@ on boot
     # Charge only mode services.
     exec /system/bin/mot_boot_mode
 
-    #Disable CM recovery updater
-    setprop ro.disable.recovery.updater 1
-
 on property:sys.chargeonly.mode=1
     class_reset main
     class_reset late_start
