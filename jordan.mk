@@ -30,6 +30,20 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/moto/jordan-common/overlay
 
+#HWUI Tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.hwui.disable_scissor_opt=true \
+	ro.hwui.texture_cache_size=4 \
+	ro.hwui.fbo_cache_size=4 \
+	ro.hwui.text_small_cache_width=256 \
+	ro.hwui.text_small_cache_height=64 \
+	ro.hwui.text_large_cache_width=512 \
+	ro.hwui.text_large_cache_height=128 \
+	ro.hwui.drop_shadow_cache_size=0.5 \
+	ro.hwui.r_buffer_cache_size=1 \
+	ro.hwui.text_gamma_correction=shader \
+	hwui.use_gpu_pixel_buffers=false
+
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.media.capture.flip=horizontalandvertical \
 	ro.com.google.locationfeatures=1 \
@@ -41,7 +55,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=240 \
 	ro.bq.gpu_to_cpu_unsupported=1 \
 	dalvik.vm.debug.alloc=0 \
-	ro.hwui.disable_scissor_opt=true \
 	cm.updater.uri=http://defy.cm-for.us/api \
 	ro.setupwizard.enable_bypass=1 \
 	persist.sys.root_access=3 \
@@ -105,6 +118,7 @@ PRODUCT_PACKAGES += dspexec libbridge libLCML libOMX_Core libstagefrighthw
 PRODUCT_PACKAGES += libOMX.TI.AAC.encode libOMX.TI.AAC.decode libOMX.TI.AMR.decode libOMX.TI.AMR.encode
 PRODUCT_PACKAGES += libOMX.TI.WBAMR.encode libOMX.TI.MP3.decode libOMX.TI.WBAMR.decode
 PRODUCT_PACKAGES += libOMX.TI.Video.Decoder libOMX.TI.Video.encoder libOMX.TI.JPEG.Encoder
+PRODUCT_PACKAGES += libOMX.TI.720P.Encoder
 
 # Defy stuff
 PRODUCT_PACKAGES += libfnc DefyParts MotoFM MotoFMService camera_detect HwaSettings
