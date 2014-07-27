@@ -96,7 +96,6 @@ OMX_VENDOR_INCLUDES := \
 OMX_VENDOR_WRAPPER := TI_OMX_Wrapper
 BOARD_OPENCORE_LIBRARIES := libOMX_Core
 BOARD_OPENCORE_FLAGS := -DHARDWARE_OMX=1
-#BOARD_CAMERA_LIBRARIES := libcamera
 
 # TWRP Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -124,12 +123,13 @@ TW_NO_SCREEN_BLANK := true
 TW_HAS_NO_RECOVERY_PARTITION := true
 TW_HAS_NO_BOOT_PARTITION := true
 TW_NO_SCREEN_TIMEOUT := true
-
 TARGET_RECOVERY_PRE_COMMAND :=  "echo recovery > /cache/recovery/bootmode.conf; sync; \#"
 TARGET_RECOVERY_PRE_COMMAND_CLEAR_REASON := true
 TARGET_NO_SEPARATE_RECOVERY := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
+TW_EXCLUDE_SUPERSU := true
+TW_EXCLUDE_ENCRYPTED_BACKUPS := true
 
 # Egl Specific
 USE_OPENGL_RENDERER := true
@@ -230,10 +230,8 @@ hboot:
 TARGET_KERNEL_SOURCE := $(ANDROID_BUILD_TOP)/jordan-kernel
 BOARD_KERNEL_CMDLINE := console=/dev/null mem=500M omapfb.vram=0:4M cpcap_charger_enabled=n
 BOARD_RECOVERY_KERNEL_CMDLINE := console=/dev/null mem=500M omapfb.vram=0:4M  cpcap_charger_enabled=y
-
 # Extra: external modules sources
 TARGET_KERNEL_MODULES_EXT := $(ANDROID_BUILD_TOP)/device/moto/jordan-common/modules/sources/
-
 TARGET_4_4_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-
 
 ifeq ($(TARGET_USE_KERNEL_BACKPORTS),true)
